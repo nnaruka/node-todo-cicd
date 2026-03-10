@@ -51,4 +51,57 @@ ECR
     docker push 333519902580.dkr.ecr.eu-north-1.amazonaws.com/node-app:latest
     docker images
 
+ECS - Cluster
+================
+1.     Create cluster node-app-cluster
+2.     Infrastructure - Fargate only(Select), Fargate and managed instances, Fargate and Self-managed instances
+       Monitoring - Cloud Watch(Container Insights with enhanced observability) 
+       Create Cluster
+
+ECS
+=======
+1.     Create Task Defination node-todo-app-td
+2.     Select Memory, CPU, Port, Environment Variable
+
+3.     Create Task Role ecsTaskExecutionRole in IAM
+        Assign AmazonECSTaskExecutionRolePolicy policy
+        Task Role select the role 
+4.     Container - 1
+        Name : node-container 
+        Image URL - browse from ECR images
+
+        Container posrt 8000 
+        Min CPU, Max CPU, Memory hard/soft limit
+
+5.     Click Task Defination and Deploy it to Cluster 
+
+6.     Check in ECS clusters --> Tasks --> Check Status
+
+
+
+
+
+        
+
+
+
+
+
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
