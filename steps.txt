@@ -36,6 +36,7 @@ Ubuntu
     AmazonElasticContainerRegistryPublicFullAccess
     AmazonElasticContainerRegistryPublicPowerUser
     AmazonElasticContainerRegistryPublicReadOnly
+    AmazonEC2ContainerRegistryPowerUser
     
 
 ECR
@@ -44,8 +45,10 @@ ECR
 2. Click node-app-> images -> push command (view them)
     
     aws ecr get-login-password --region eu-north-1 | docker login --username AWS --password-stdin 333519902580.dkr.ecr.eu-north-1.amazonaws.com
+    cd node-todo-app
     docker build -t node-app .
     docker tag node-app:latest 333519902580.dkr.ecr.eu-north-1.amazonaws.com/node-app:latest
     docker push 333519902580.dkr.ecr.eu-north-1.amazonaws.com/node-app:latest
+    docker images
 
 
