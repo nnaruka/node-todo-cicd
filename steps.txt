@@ -13,8 +13,15 @@ Ubuntu
 3. Docker
     sudo apt install docker.io
     sudo usermod -aG docker $USER
+    sudo su - ubuntu
+    docker ps
 
 4. Install AWS Cli
+    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+    sudo apt install unzip
+    sudo unzip awscliv2.zip
+    sudo ./aws/install
+    aws --version
     
 
 ECR
