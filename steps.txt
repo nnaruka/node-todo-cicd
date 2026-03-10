@@ -1,0 +1,6 @@
+Create and Login to EC2 instance
+Ensure I'm able to connect from my IP.
+
+Ubuntu
+1.Generate ssh key and upload into github 
+git clone git@github.com:nnaruka/node-todo-cicd.git
