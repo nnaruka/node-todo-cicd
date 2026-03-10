@@ -32,8 +32,7 @@ Ubuntu
     setup Access key and Secret Access key from dashboard
 
     IAM
-    User bhide should have permission to access ECR
-    give following policy access to user bhide
+    User bhide should have permission to access ECR, give following policy access to user bhide
     AmazonElasticContainerRegistryPublicFullAccess
     AmazonElasticContainerRegistryPublicPowerUser
     AmazonElasticContainerRegistryPublicReadOnly
