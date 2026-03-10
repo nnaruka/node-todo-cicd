@@ -22,15 +22,24 @@ Ubuntu
     sudo unzip awscliv2.zip
     sudo ./aws/install
     aws --version
+
+5. Configure aws login from EC2 to ECR so it can connect
+    Create IAM User bhide
+    User bhide -> Security Credentials -> create Access key -> aws cli
+
+    EC2
+    aws configure
+    setup Access key and Secret Access key from dashboard
     
 
 ECR
 =============
 1. Create Repository in ECR "node-app"
 2. Click node-app-> images -> push command (view them)
-   aws ecr get-login-password --region eu-north-1 | docker login --username AWS --password-stdin 333519902580.dkr.ecr.eu-north-1.amazonaws.com
-   docker build -t node-app .
-   docker tag node-app:latest 333519902580.dkr.ecr.eu-north-1.amazonaws.com/node-app:latest
-   docker push 333519902580.dkr.ecr.eu-north-1.amazonaws.com/node-app:latest
+    
+    aws ecr get-login-password --region eu-north-1 | docker login --username AWS --password-stdin 333519902580.dkr.ecr.eu-north-1.amazonaws.com
+    docker build -t node-app .
+    docker tag node-app:latest 333519902580.dkr.ecr.eu-north-1.amazonaws.com/node-app:latest
+    docker push 333519902580.dkr.ecr.eu-north-1.amazonaws.com/node-app:latest
 
 
